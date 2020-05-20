@@ -19,19 +19,25 @@ class CardImage extends StatelessWidget {
         ),
 
       decoration: BoxDecoration(
+
           image: DecorationImage(
         fit: BoxFit.cover,
             image: AssetImage(pathImage)
       ),
         borderRadius: BorderRadius.all(Radius.circular(30.0)),
           shape: BoxShape.rectangle,
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: Colors.black45,
-            blurRadius: 15.0,
-            offset: Offset(0.0,7.0)
-          )
-        ]
+        boxShadow: [
+          BoxShadow (
+            color: const Color(0xcc000000),
+            offset: Offset(0, 2),
+            blurRadius: 4,
+          ),
+          BoxShadow (
+            color: const Color(0x80000000),
+            offset: Offset(0, 6),
+            blurRadius: 20,
+          ),
+        ],
       ),
     );
 
