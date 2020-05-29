@@ -8,7 +8,7 @@ class ButtonA extends StatelessWidget {
 
   String buttonText = "Why Psychopapp?";
 
-  ButtonA(this.buttonText);
+  ButtonA( this.buttonText);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,8 @@ class ButtonA extends StatelessWidget {
 
 
       },
-      child: Container (
+      child:
+      Container (
         margin: EdgeInsets.only(
         top: 30.0,
         left: 20.0,
@@ -40,6 +41,18 @@ class ButtonA extends StatelessWidget {
             height: 50.0,
           width: 180.0,
         decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow (
+                color: const Color(0xcc000000),
+                offset: Offset(0, 2),
+                blurRadius: 4,
+              ),
+              BoxShadow (
+                color: const Color(0x80000000),
+                offset: Offset(0, 6),
+                blurRadius: 20,
+              ),
+            ],
           borderRadius: BorderRadius.circular(30.0),
           gradient: LinearGradient(
             colors: [

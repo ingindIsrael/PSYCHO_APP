@@ -85,6 +85,18 @@ class DoctorCard extends StatelessWidget {
       height: 80.0,
 
       decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow (
+              color: const Color(0xcc000000),
+              offset: Offset(0, 2),
+              blurRadius: 4,
+            ),
+            BoxShadow (
+              color: const Color(0x80000000),
+              offset: Offset(0, 6),
+              blurRadius: 20,
+            ),
+          ],
           shape: BoxShape.circle,
           image: DecorationImage(
               fit: BoxFit.cover,
@@ -100,7 +112,7 @@ class DoctorCard extends StatelessWidget {
             children: <Widget>[
               DoctorPhoto,
               DoctorDetails,
-              ButtonB("Chat now")
+              ButtonB("Appointment")
             ],
           ),
           DoctorComent

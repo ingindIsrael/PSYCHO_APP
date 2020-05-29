@@ -14,6 +14,7 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     final UserComent = Container(
+
       margin: EdgeInsets.only(
           left: 0.0
       ),
@@ -25,10 +26,10 @@ class Review extends StatelessWidget {
     final UserInfo = Container(
       margin: EdgeInsets.only(
           left: 0.0
-      ),
-      child: Text(info, textAlign: TextAlign.left, style: TextStyle(
-          fontSize: 13.0
-      ),),
+    ),
+    child: Text(info, textAlign: TextAlign.left, style: TextStyle(
+    fontSize: 13.0
+    ),),
     );
 
     final UserName = Container(
@@ -52,6 +53,18 @@ class Review extends StatelessWidget {
       height: 80.0,
 
       decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow (
+              color: const Color(0xcc000000),
+              offset: Offset(0, 2),
+              blurRadius: 4,
+            ),
+            BoxShadow (
+              color: const Color(0x80000000),
+              offset: Offset(0, 6),
+              blurRadius: 20,
+            ),
+          ],
         shape: BoxShape.circle,
         image: DecorationImage(
             fit: BoxFit.cover,
@@ -78,13 +91,18 @@ class Review extends StatelessWidget {
         UserComent
       ],
     );
-    return Row (
+    return Container(
+        decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 0.5, color: Colors.grey))),
+        child:
+        Row (
       children: <Widget>[
         Photo,
         UserDetails,
 
       ],
+    )
     );
+
 
   }
 
